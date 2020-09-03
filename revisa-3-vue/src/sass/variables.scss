@@ -1,0 +1,46 @@
+// cores principais
+$azul: #00B8ED;
+$azulClaro: #81D4FA;
+$amarelo: #ffcb05;
+$vermelho: #D55050;
+$verdeDesempenho: #76FFA9;
+
+// cores das áreas
+$linguagens: #FAB145;
+$matematica: #9BF79F;
+$natureza: #EAA0F7;
+$humanas: #90CAF9;
+
+// cores dos desempenhos
+$desempenho__excelente: #49D1F2;
+$desempenho__otimo: #55D550;
+$desempenho__bom: #AAE11C;
+$desempenho__ruim: #D5B650;
+$desempenho__muito__ruim: #D55050;
+
+// cores das dificuldades
+$facil: #49D1F2;
+$normal: #55D550;
+$dificil: #D5B650;
+$muito__dificil: #D55050;
+
+// border radius
+$borda__redonda: 10px;
+$borda__full: calc(var(--height) / 2);
+
+// margem  dos botões
+$margin__btn: 4rem 2rem;
+$margin__nav: 2rem 1rem;
+
+// padding select e botões
+$padding__btn: 1rem 2.5rem;
+
+// sombra dos botos
+$sombra__btn: 3px 4px 8px rgba(20, 20, 20, .2);
+$sombra__btn__hover: 3px 4px 12px rgba(20, 20, 20, .39);
+
+$sombra__btn__forte: 3px 4px 8px rgba(20, 20, 20, .3);
+$sombra__btn__forte__hover: 3px 4px 14px rgba(20, 20, 20, .4);
+
+// border-radius
+$redondo: 8px;

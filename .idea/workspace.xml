@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="39f08820-0911-4cc0-8696-e87f16fd44ad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/components/Calendario.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/components/Comentarios.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/components/Comentarios.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/components/MenuLateral.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/components/MenuLateral.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/components/PremiosMensais.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/components/QuestoesSimuladosAtividades.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/components/QuestoesSimuladosAtividades.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/components/SelecionarRanking.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/components/SelecionarRanking.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/components/Toolbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/components/Toolbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/DesempenhoGeral.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/DesempenhoGeral.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/MeuPerfil.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/Ranking.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/Ranking.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/aula-ao-vivo/AulasAoVivo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/aula-ao-vivo/ListarTransmitidas.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/aula-ao-vivo/VideoAulaAoVivo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/loja/Carrinho.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/loja/Loja.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/loja/Pedidos.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/redacao/RedacaoCorrigida.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/redacao/RedacaoCorrigida.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/redacao/RedacaoEnviar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/redacao/RedacaoEnviar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/redacao/RedacaoInicio.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/redacao/RedacaoInicio.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/simulado-ativiades-escolares/DesempenhoSimulado.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/simulado-ativiades-escolares/DesempenhoSimulado.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/simulado-ativiades-escolares/SimuladosAtividadesInicio.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/simulado-ativiades-escolares/SimuladosAtividadesInicio.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/simulado-personalizado/GerarSimulado.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/simulado-personalizado/SimuladoPersonalizadoInicio.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/suporte/SuporteInicio.vue" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/pages/suporte/SuporteInicio.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/videoaulas/ListaAssuntos.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/videoaulas/Videoaula.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/pages/videoaulas/VideoaulasInicio.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/plugins/vuetify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/src/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/src/routes/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisa-3-vue/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/revisa-3-vue/vue.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/revisa-3-vue" />
+  </component>
+  <component name="ProjectId" id="1h0Yx3T8NE80sQICSPYQIeBGJlG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39f08820-0911-4cc0-8696-e87f16fd44ad" name="Default Changelist" comment="" />
+      <created>1599149719486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599149719486</updated>
+      <workItem from="1599149720572" duration="1881000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="523" y="528" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599150043530">
+      <screen x="0" y="0" width="3072" height="1688" />
+    </state>
+    <state x="523" y="528" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3072.1688@0.0.3072.1688" timestamp="1599150043530" />
+    <state width="1549" height="449" key="GridCell.Tab.0.bottom" timestamp="1599149932426">
+      <screen x="0" y="0" width="3072" height="1688" />
+    </state>
+    <state width="1549" height="449" key="GridCell.Tab.0.bottom/0.0.3072.1688@0.0.3072.1688" timestamp="1599149932426" />
+    <state width="1549" height="449" key="GridCell.Tab.0.center" timestamp="1599149932425">
+      <screen x="0" y="0" width="3072" height="1688" />
+    </state>
+    <state width="1549" height="449" key="GridCell.Tab.0.center/0.0.3072.1688@0.0.3072.1688" timestamp="1599149932425" />
+    <state width="1549" height="449" key="GridCell.Tab.0.left" timestamp="1599149932425">
+      <screen x="0" y="0" width="3072" height="1688" />
+    </state>
+    <state width="1549" height="449" key="GridCell.Tab.0.left/0.0.3072.1688@0.0.3072.1688" timestamp="1599149932425" />
+    <state width="1549" height="449" key="GridCell.Tab.0.right" timestamp="1599149932426">
+      <screen x="0" y="0" width="3072" height="1688" />
+    </state>
+    <state width="1549" height="449" key="GridCell.Tab.0.right/0.0.3072.1688@0.0.3072.1688" timestamp="1599149932426" />
+  </component>
+</project>
