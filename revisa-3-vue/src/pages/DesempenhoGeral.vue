@@ -15,7 +15,7 @@
     <v-row>
       <v-col cols="12">
         <header-secao>
-          Sua pontuação e rankings
+          Seu Desempenho e Rankings
         </header-secao>
       </v-col>
 
@@ -26,7 +26,7 @@
           cols="12" class="mt-8"
       >
         <subheader-secao>
-          Ranking Estadual
+          Ranking Escolar
         </subheader-secao>
       </v-col>
 
@@ -64,6 +64,37 @@
             </p>
           </v-card-text>
         </v-card>
+      </v-col>
+
+      <!-- tabela com o desempenho por área do aluno -->
+      <v-col
+          cols="12" class="mt-8"
+      >
+        <subheader-secao>
+          Desempenho por Área
+        </subheader-secao>
+      </v-col>
+
+      <v-col cols="12">
+        <v-data-table
+            :headers="headerArea" :items="desempenhoArea"
+            fixed-header hide-default-footer
+        />
+      </v-col>
+      <!-- tabela com o desempenho por disciplina do aluno -->
+      <v-col
+          cols="12" class="mt-8"
+      >
+        <subheader-secao>
+          Desempenho por Disciplina
+        </subheader-secao>
+      </v-col>
+
+      <v-col cols="12">
+        <v-data-table
+            :headers="headerDisciplina" :items="desempenhoDisciplina"
+            fixed-header hide-default-footer
+        />
       </v-col>
 
       <!-- premios que a gente vai receber -->
@@ -634,106 +665,8 @@
           cols="12" class="mt-12"
       >
         <header-secao>
-          Conquistas e Histórico de acessos
+          Histórico de acessos
         </header-secao>
-      </v-col>
-
-      <!-- historico das videoaulas -->
-      <v-col
-          cols="12" md="6"
-      >
-        <subheader-secao class="mb-4">
-          Minhas videoaulas
-        </subheader-secao>
-
-        <v-card class="mr-4 mb-2 d-inline-block">
-          <v-card-text class="d-flex align-center justify-space-between grey--text text--darken-3">
-            <article>
-              <p class="font-weight-bold">
-                Assistidas
-              </p>
-
-              <p>
-                30 videoaulas
-              </p>
-            </article>
-
-            <article class="ml-2 d-flex align-center justify-center flex-shrink-0 w-40 h-40 rounded-circle azul">
-              <v-icon
-                  v-text="'mdi-play-outline'" color="black"
-              />
-            </article>
-          </v-card-text>
-        </v-card>
-
-        <v-card class="d-inline-block">
-          <v-card-text class="d-flex align-center justify-space-between grey--text text--darken-3">
-            <article>
-              <p class="font-weight-bold">
-                Exercícios
-              </p>
-
-              <p>
-                20 questões feitas
-              </p>
-            </article>
-
-            <article class="ml-2 d-flex align-center justify-center flex-shrink-0 w-40 h-40 rounded-circle azul">
-              <v-icon
-                  v-text="'mdi-checkbox-marked-circle-outline'" color="black"
-              />
-            </article>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <!-- videoaulas ao vivo -->
-      <v-col
-          cols="12" md="6"
-      >
-        <subheader-secao class="mb-4">
-          Presenças em videoaulas ao vivo
-        </subheader-secao>
-
-        <v-card class="mr-4 mb-2 d-inline-block">
-          <v-card-text class="d-flex align-center justify-space-between grey--text text--darken-3">
-            <article>
-              <p class="font-weight-bold">
-                Assistidas
-              </p>
-
-              <p>
-                30 videoaulas
-              </p>
-            </article>
-
-            <article class="ml-2 d-flex align-center justify-center flex-shrink-0 w-40 h-40 rounded-circle azul">
-              <v-icon
-                  v-text="'mdi-play-outline'" color="black"
-              />
-            </article>
-          </v-card-text>
-        </v-card>
-
-        <v-card class="d-inline-block">
-          <v-card-text class="d-flex align-center justify-space-between grey--text text--darken-3">
-            <article>
-              <p class="font-weight-bold">
-                Exercícios
-              </p>
-
-              <p>
-                20 questões feitas
-              </p>
-            </article>
-
-            <article class="ml-2 d-flex align-center justify-center flex-shrink-0 w-40 h-40 rounded-circle azul">
-              <v-icon
-                  v-text="'mdi-checkbox-marked-circle-outline'" color="black"
-              />
-            </article>
-          </v-card-text>
-        </v-card>
       </v-col>
 
       <!-- historico de acesso -->
@@ -748,11 +681,11 @@
           <v-card-text class="d-flex align-center justify-space-between grey--text text--darken-3">
             <article>
               <p class="font-weight-bold">
-                Último acesso
+                Dia 1
               </p>
 
               <p>
-                18/05 quinta-feira
+                10.000 alunos
               </p>
             </article>
 
@@ -768,11 +701,11 @@
           <v-card-text class="d-flex align-center justify-space-between grey--text text--darken-3">
             <article>
               <p class="font-weight-bold">
-                Histórico semanal
+                Dia 2
               </p>
 
               <p>
-                18 acessos
+                9.800 alunos
               </p>
             </article>
 
@@ -785,88 +718,148 @@
         </v-card>
       </v-col>
     </v-row>
-
-    <!-- conquistas -->
-    <v-row>
-      <v-col
-          cols="12" class="mt-12"
-      >
-        <header-secao>
-          Conquistas
-        </header-secao>
-      </v-col>
-
-      <v-col
-          cols="12"
-      >
-        <subheader-secao>
-          Metas conquistadas
-        </subheader-secao>
-      </v-col>
-
-      <!-- historico das videoaulas -->
-      <v-col
-          cols="12" md="6"
-      >
-        <v-card class="mr-4 d-inline-block">
-          <v-card-text class="d-flex align-center justify-space-between grey--text text--darken-3">
-            <article>
-              <p class="font-weight-bold">
-                Paranuê paranauá
-              </p>
-            </article>
-
-            <article class="ml-2 d-flex align-center justify-center flex-shrink-0 w-40 h-40 rounded-circle azul">
-              <v-icon
-                  v-text="'mdi-play-outline'" color="black"
-              />
-            </article>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <v-col
-          cols="12" class="mt-8"
-      >
-        <subheader-secao>
-          Metas para conquistar
-        </subheader-secao>
-      </v-col>
-
-      <!-- historico das videoaulas -->
-      <v-col
-          cols="12" md="6"
-      >
-        <v-card class="mr-4 d-inline-block">
-          <v-card-text class="d-flex align-center justify-space-between grey--text text--darken-3">
-            <article>
-              <p class="font-weight-bold">
-                Paranuê paranauá
-              </p>
-            </article>
-
-            <article class="ml-2 d-flex align-center justify-center flex-shrink-0 w-40 h-40 rounded-circle azul">
-              <v-icon
-                  v-text="'mdi-play-outline'" color="black"
-              />
-            </article>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
   </v-container>
 </template>
 
 <script>
 import SelecionarRanking from '../components/SelecionarRanking.vue';
+import PremiosMensais from '../components/PremiosMensais.vue';
 
 export default {
   name: 'DesempenhoGeral',
-  components: { SelecionarRanking },
+  components: { PremiosMensais, SelecionarRanking },
 
   data () {
     return {
       play: 'mdi-play',
+
+      desempenhoArea: [
+        {
+          redacao: 880,
+          humanas: 950,
+          natureza: 800,
+          matematica: 800,
+          linguagens: 900,
+        },
+      ],
+      desempenhoDisciplina: [
+        {
+          geografia: 880,
+          historia: 950,
+          filosofia: 800,
+          sociologia: 800,
+          biologia: 900,
+          fisica: 900,
+          quimica: 900,
+          portugues: 900,
+          ingles: 900,
+          artes: 900,
+          edFisica: 900,
+        },
+      ],
+      headerArea: [
+        {
+          text: 'Ciências Humanas',
+          align: 'start',
+          sortable: false,
+          value: 'humanas',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Ciências da Natureza',
+          sortable: false,
+          value: 'natureza',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Liguagens e seus Códigos',
+          sortable: false,
+          value: 'linguagens',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Matemática',
+          sortable: false,
+          value: 'matematica',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Redação',
+          sortable: false,
+          value: 'redacao',
+          class: 'body-2 font-weight-bold',
+        },
+      ],
+      headerDisciplina: [
+        {
+          text: 'Geografia',
+          align: 'start',
+          sortable: false,
+          value: 'geografia',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'História',
+          sortable: false,
+          value: 'historia',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Filosofia',
+          sortable: false,
+          value: 'filosofia',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Sociologia',
+          sortable: false,
+          value: 'sociologia',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Biologia',
+          sortable: false,
+          value: 'biologia',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Física',
+          sortable: false,
+          value: 'fisica',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Química',
+          sortable: false,
+          value: 'quimica',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Português',
+          sortable: false,
+          value: 'portugues',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Inglês',
+          sortable: false,
+          value: 'ingles',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Artes',
+          sortable: false,
+          value: 'artes',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Ed. Física',
+          sortable: false,
+          value: 'edFisica',
+          class: 'body-2 font-weight-bold',
+        },
+      ],
+
       disciplinas: ['Português', 'Espanhol', 'Inlgês', 'Literatura', 'Artes', 'Ed. Física', 'Matemática', 'Química', 'Física', 'Biologia', 'História', 'Geografia', 'Filosofia', 'Sociologia'],
       desempenhoEscolhido: null,
       informacoesAdicionais: [
@@ -895,11 +888,6 @@ export default {
           tipo: 'Redações',
           descricao: 'Ver a evolução do meu desempenho nas redações corrigidas',
           classe: 'destaque__redacao__desempenho',
-        },
-        {
-          tipo: 'Conquistas e histórico',
-          descricao: 'Ver todas as conquistas atingidas, conquistas para atingir e histórico de acesso',
-          classe: 'destaque__conquistas__desempenho',
         },
       ],
 

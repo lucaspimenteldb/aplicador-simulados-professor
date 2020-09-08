@@ -16,20 +16,6 @@
       <v-toolbar-title
           class="white--text d-none d-sm-block" v-text="'RevisaENEM'"
       />
-
-      <v-spacer />
-
-      <!--barra de pesquisa-->
-      <v-text-field
-          label="Pesquisar" class="mr-0 mr-sm-4 max-w-240 btn__shadow"
-          single-line rounded
-          filled clearable
-          color="azulRevisa" background-color="white"
-          dense append-icon="mdi-magnify"
-          @click:append="text"
-          hide-details solo
-      />
-      <!--fim da barra de pesquisa-->
     </v-app-bar>
   </nav>
 </template>

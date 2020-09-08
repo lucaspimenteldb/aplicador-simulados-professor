@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-row>
       <v-col cols="12">
         <h1>
@@ -68,29 +68,76 @@
 
       <SelecionarRanking />
 
-      <!-- mês do ranking -->
+      <!-- médias -->
       <v-col
           cols="12" class="mt-8"
       >
         <subheader-secao>
-          Você quer ver o ranking de qual mês?
+          Desempenho Geral
         </subheader-secao>
+      </v-col>
 
-        <v-btn class="mt-2 azul white--text font-weight-medium text-capitalize btn__shadow rounded__normal">
-          Mês atual
-        </v-btn>
+      <v-col
+          cols="12" sm="6"
+          md="4" lg="3"
+          v-for="desempenho in desempenhoGeral" :key="desempenho.ttl"
+      >
+        <v-card>
+          <v-card-text>
+            <p class="font-weight-bold grey--text text--darken-3">
+              {{ desempenho.ttl }}
+            </p>
 
-        <v-btn
-            class="mt-2 ml-4 border-3 border__azul azul--text font-weight-medium text-capitalize rounded__normal"
-        >
-          Julho
-        </v-btn>
+            <h5 class="text-h4 font-weight-bold grey--text text--darken-3">
+              {{  desempenho.nota }}
+            </h5>
 
-        <v-btn
-            class="mt-2 ml-4 border-3 border__azul azul--text font-weight-medium text-capitalize rounded__normal"
-        >
-          Junho
-        </v-btn>
+            <div
+                class="w-1/3 absolute bottom-0 right-4 azul rounded__normal__top"
+                :style="{ height: `${desempenho.altura}%` }"
+            >
+              <p class="mt-4 text-center font-weight-medium white--text">
+                {{ desempenho.altura.toFixed() }}%
+              </p>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <!-- médias -->
+      <v-col
+          cols="12" class="mt-8"
+      >
+        <subheader-secao>
+          Ranking por Área
+        </subheader-secao>
+      </v-col>
+
+      <v-col
+          cols="12" sm="4"
+          md="3"
+          v-for="desempenho in desempenhoArea" :key="desempenho.ttl"
+      >
+        <v-card>
+          <v-card-text>
+            <p class="font-weight-bold grey--text text--darken-3">
+              {{ desempenho.ttl }}
+            </p>
+
+            <h5 class="text-h6 font-weight-bold grey--text text--darken-3">
+              {{  desempenho.ranking }}º <span class="body-2">colocado</span>
+            </h5>
+
+            <div
+                class="w-40 h-1/2 absolute bottom-0 right-4 text-center azul rounded__normal__top"
+            >
+              <v-icon
+                  v-text="'mdi-seal-variant'" color="white"
+                  class="mt-2"
+              />
+            </div>
+          </v-card-text>
+        </v-card>
       </v-col>
 
       <!-- os 3 melhores do ranking -->
@@ -220,109 +267,6 @@
               {{ item.posicao }}
             </p>
           </template>
-
-          <template v-slot:item.urlPerfil="{ item }">
-            <v-menu
-                bottom offset-y
-                origin="top left"
-                transition="scale-transition"
-            >
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                    :to="item.urlPerfil" class="azul white--text rounded__normal text-capitalize"
-                    v-bind="attrs" v-on="on"
-                >
-                  Ver perfil
-                </v-btn>
-              </template>
-
-              <!-- card para visualização do perfil após clique-->
-              <v-list class="pa-0 max-w-240">
-                <v-list-item class="pa-0 flex-column">
-                  <v-list-item-title class="pa-4 pb-2">
-                    <div class="d-flex align-center">
-                      <v-avatar size="40px">
-                        <v-img :src="require(`@/assets/img/ranking/imagem-ranking.png`)" />
-                      </v-avatar>
-
-                      <!-- nome da escola e nível-->
-                      <article class="ml-4">
-                        <h4 class="body-1 font-weight-bold leading__supertight">
-                          Lucas
-                        </h4>
-
-                        <p class="caption">
-                          Escola Manuel da Fônseca
-                        </p>
-                      </article>
-                    </div>
-                  </v-list-item-title>
-
-                  <!-- desempenho do simulado e redação-->
-                  <v-list-item-content class="pt-0 px-4 d-flex flex-row w-full">
-                    <article class="mt-4 mr-8 d-inline-block max-w-68">
-                      <h6 class="mb-2 body-2 font-weight-bold">
-                        Redações
-                      </h6>
-
-                      <v-progress-circular
-                          :size="66" :width="3"
-                          :value="nivel" color="azul"
-                      >
-                        {{ nivel+'%' }}
-                      </v-progress-circular>
-                    </article>
-
-                    <article class="mt-4 d-inline-block max-w-68">
-                      <h6 class="mb-2 body-2 font-weight-bold">
-                        Simulados
-                      </h6>
-
-                      <v-progress-circular
-                          :size="66" :width="3"
-                          :value="nivel" color="azul"
-                      >
-                        {{ nivel+'%' }}
-                      </v-progress-circular>
-                    </article>
-
-                    <section class="mt-4">
-                      <h6 class="mb-2 body-2 font-weight-bold leading__supertight">
-                        <v-icon
-                            v-text="'mdi-trophy-award'" color="black"
-                            small class="mb-1"
-                        />
-
-                        32 Conquistas
-                      </h6>
-
-                      <v-btn
-                          fab depressed
-                          small dark
-                          class="mr-1 azul"
-                      >
-                        <v-icon v-text="'mdi-alien-outline'" />
-                      </v-btn>
-                      <v-btn
-                          fab depressed
-                          small dark
-                          class="mr-1 azul"
-                      >
-                        <v-icon v-text="'mdi-bicycle'" />
-                      </v-btn>
-                      <v-btn
-                          fab depressed
-                          small dark
-                          class="mr-1 azul"
-                      >
-                        <v-icon v-text="'mdi-skull-outline'" />
-                      </v-btn>
-                    </section>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </template>
         </v-data-table>
       </v-col>
     </v-row>
@@ -351,6 +295,53 @@ export default {
           tipo: 'Escolar',
           colocacao: 16,
           pontos: 740,
+        },
+      ],
+
+      desempenhoArea: [
+        {
+          ttl: 'Linguagens',
+          ranking: 750,
+        },
+        {
+          ttl: 'Humanas',
+          ranking: 920,
+        },
+        {
+          ttl: 'Matemática',
+          ranking: 110,
+        },
+        {
+          ttl: 'Natureza',
+          ranking: 110,
+        },
+        {
+          ttl: 'Redação',
+          ranking: 110,
+        },
+      ],
+
+      desempenhoGeral: [
+        {
+          ttl: 'Média TRI',
+          nota: 750,
+          get altura () {
+            return this.nota / 10;
+          },
+        },
+        {
+          ttl: 'Redação 1',
+          nota: 920,
+          get altura () {
+            return this.nota / 10;
+          },
+        },
+        {
+          ttl: 'Acertos totais',
+          nota: 110,
+          get altura () {
+            return (this.nota / 180) * 100;
+          },
         },
       ],
 
@@ -386,73 +377,64 @@ export default {
           icon: 'mdi-podium-gold',
           posicao: '#1',
           nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          redacao: 880,
+          pontuacao: 950,
         },
         {
           icon: 'mdi-podium-silver',
           posicao: '#2',
-          nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          nome: 'Philips',
+          redacao: 880,
+          pontuacao: 950,
         },
         {
           icon: 'mdi-podium-bronze',
           posicao: '#3',
-          nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          nome: 'Sanilips',
+          redacao: 880,
+          pontuacao: 950,
         },
         {
           icon: 'mdi-seal-variant',
           posicao: '#4',
-          nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          nome: 'Sahilips',
+          redacao: 880,
+          pontuacao: 950,
         },
         {
           icon: 'mdi-seal-variant',
           posicao: '#5',
-          nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          nome: 'Sanzados',
+          redacao: 880,
+          pontuacao: 950,
         },
         {
           icon: 'mdi-seal-variant',
           posicao: '#6',
-          nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          nome: 'Phil',
+          redacao: 880,
+          pontuacao: 950,
         },
         {
           icon: 'mdi-seal-variant',
           posicao: '#7',
-          nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          nome: 'Pips',
+          redacao: 880,
+          pontuacao: 950,
         },
         {
           icon: 'mdi-seal-variant',
           posicao: '#8',
-          nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          nome: 'Sanitizaps',
+          redacao: 880,
+          pontuacao: 950,
         },
         {
           icon: 'mdi-seal-variant',
           posicao: '#9',
-          nome: 'Sanitizado Philips',
-          conquistas: '30 conq.',
-          pontuacao: '950 pts.',
-          urlPerfil: '',
+          nome: 'Sanitili',
+          redacao: 880,
+          pontuacao: 950,
         },
       ],
       headerRanking: [
@@ -470,21 +452,15 @@ export default {
           class: 'body-2 font-weight-bold',
         },
         {
-          text: 'Conquistas',
+          text: 'Redação',
           sortable: false,
-          value: 'conquistas',
+          value: 'redacao',
           class: 'body-2 font-weight-bold',
         },
         {
-          text: 'Pontuação',
+          text: 'Média TRI',
           sortable: false,
           value: 'pontuacao',
-          class: 'body-2 font-weight-bold',
-        },
-        {
-          text: 'Ver pefil',
-          sortable: false,
-          value: 'urlPerfil',
           class: 'body-2 font-weight-bold',
         },
       ],

@@ -80,7 +80,7 @@
             <v-card-text>
               <article class="relative">
                 <p class="mr-8 text-h6 leading__tight grey--text text--darken-3">
-                  Redação 08/10
+                  Redação 1 - 08/10
                 </p>
 
                 <p class="red--text font-weight-medium caption grey--text text--darken-3">
@@ -245,7 +245,7 @@ export default {
           },
           entrega: '18/08',
           questoes: '45',
-          disciplina: 'Matemática',
+          disciplina: 'Humanas',
         },
         {
           get nomeAtividade () {
@@ -253,7 +253,7 @@ export default {
           },
           entrega: '18/08',
           questoes: '45',
-          disciplina: 'Português',
+          disciplina: 'Linguagens',
         },
       ],
 

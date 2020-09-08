@@ -155,7 +155,7 @@
                     {{ tooltipData.data[2] }}
 
                     <p class="caption">
-                      Desempenho da turma
+                      Desempenho da Escola
                     </p>
                   </article>
                 </div>
@@ -234,12 +234,6 @@ export default {
           enviada: '01/08',
           tema: 'Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae',
           nota: 800,
-        },
-        {
-          nome: 'Redação 2',
-          enviada: '13/08',
-          tema: 'Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Leite de capivaris, leite de mula manquis sem cabeça.',
-          nota: 700,
         },
       ],
     };
