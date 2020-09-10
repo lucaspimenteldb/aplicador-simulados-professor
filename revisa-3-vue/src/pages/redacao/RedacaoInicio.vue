@@ -11,7 +11,7 @@
     <v-row class="mt-8">
       <v-col cols="12">
         <header-secao>
-          Redações para fazer
+          Redações sendo aplicadas
         </header-secao>
       </v-col>
 
@@ -61,51 +61,44 @@
           cols="12" class="mt-12"
       >
         <header-secao>
-          Redações corrigidas e em correção
+          Notas
         </header-secao>
       </v-col>
 
       <v-col
-          cols="12" sm="6"
+          cols="12" sm="8"
           md="4"
-          v-for="redacaoCorrigida in redacoesCorrigidas" :key="redacaoCorrigida.nome"
       >
-        <v-card
-            class="destaque__redacao__corrgidas transition rounded__normal cursor__pointer btn__shadow" to="/redacao-corrigida"
-        >
-          <v-card-text>
-            <article class="d-flex align-end justify-space-between relative z-1">
-              <!-- descricoes da redacao -->
-              <v-card-title class="pa-0 grey--text text--darken-3">
-                {{ redacaoCorrigida.nome }}
-              </v-card-title>
+        <v-select
+            :items="escola" filled
+            label="Filtrar desempenho por escola" color="azul"
+            hide-details
+        />
+      </v-col>
 
-              <p class="caption font-weight-bold grey--text text--darken-3">
-                sua nota
-                <span class="text-h4 font-weight-bold  grey--text text--darken-3">
-                {{ redacaoCorrigida.nota }}
-              </span>
-              </p>
+      <v-col
+          cols="12" sm="8"
+          md="4"
+      >
+        <v-select
+            :items="redacao" filled
+            label="Filtrar desempenho por redação" color="azul"
+            hide-details
+        />
+      </v-col>
 
-              <div class="bolinha__notificacao absolute top-0 right-0 z--1" />
-            </article>
+      <v-col
+          cols="12" class="pa-0"
+      />
 
-            <p class="grey--text text--darken-3">
-              {{ redacaoCorrigida.tema }}
-            </p>
-
-            <article class="mt-4 relative">
-              <p class="font-weight-bold grey--text text--darken-3">
-                {{ `Ver correção da ${redacaoCorrigida.nome}` }}
-              </p>
-
-              <!-- icone para acessar -->
-              <v-icon
-                  v-text="'mdi-location-enter'" class="w__icons__28 absolute bottom-0 right-0"
-              />
-            </article>
-          </v-card-text>
-        </v-card>
+      <v-col
+          cols="12" sm="8"
+          md="6"
+      >
+        <v-data-table
+            :headers="headerRedacao" :items="notaRedacao"
+            fixed-header hide-default-footer
+        />
       </v-col>
     </v-row>
 
@@ -115,9 +108,24 @@
           cols="12" class="mt-12"
       >
         <header-secao>
-          Meu desempenho nas redaçãoes
+          Desempenho nas redaçãoes
         </header-secao>
       </v-col>
+
+      <v-col
+          cols="12" sm="8"
+          md="4"
+      >
+        <v-select
+            :items="escola" filled
+            label="Filtrar desempenho por escola" color="azul"
+            hide-details
+        />
+      </v-col>
+
+      <v-col
+          cols="12" class="pa-0"
+      />
 
       <v-col
           cols="12"
@@ -146,7 +154,7 @@
                     {{ tooltipData.data[1] }}
 
                     <p class="caption">
-                      Meu desempenho
+                      Desempenho da Escola
                     </p>
                   </article>
                 </div>
@@ -155,7 +163,7 @@
                     {{ tooltipData.data[2] }}
 
                     <p class="caption">
-                      Desempenho da Escola
+                      Média Estadual
                     </p>
                   </article>
                 </div>
@@ -183,11 +191,41 @@ export default {
 
   data () {
     return {
+      escola: ['Escola 1', 'Escola 2', 'Escola 3'],
+      redacao: ['Redação 1', 'Redação 2', 'Redação 3'],
+
       redacoesFazer: [
         {
           nome: 'Redação 3',
           entrega: '18/08',
           tema: 'Tema da redação é o seguinte assim e assado, mas que isso é aquilo',
+        },
+      ],
+
+      headerRedacao: [
+        {
+          text: 'Aluno',
+          align: 'start',
+          sortable: false,
+          value: 'nome',
+          class: 'body-2 font-weight-bold',
+        },
+        {
+          text: 'Nota',
+          sortable: false,
+          value: 'nota',
+          class: 'body-2 font-weight-bold',
+        },
+      ],
+
+      notaRedacao: [
+        {
+          nome: 'Lucas',
+          nota: 880,
+        },
+        {
+          nome: 'Jose',
+          nota: 800,
         },
       ],
 

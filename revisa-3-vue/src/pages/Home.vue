@@ -184,7 +184,7 @@
           cols="12" class="mt-12"
       >
         <header-secao>
-          Rakning
+          Ranking
         </header-secao>
       </v-col>
 

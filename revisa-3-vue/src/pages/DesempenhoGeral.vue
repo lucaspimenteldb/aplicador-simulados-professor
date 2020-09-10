@@ -3,65 +3,168 @@
     <v-row>
       <v-col cols="12">
         <h1>
-          Desempenho Geral
+          Desempenho Geral - Simulado 1
         </h1>
+      </v-col>
 
-        <h3>
-          Seu desempenho está separado por tipo
-        </h3>
+      <v-col cols="12">
+        <subheader-secao class="mb-4">
+          Filtrar desempenho por:
+        </subheader-secao>
+
+        <v-btn
+            class="mt-2 border-3 border__azul azul--text font-weight-medium text-capitalize rounded__normal"
+        >
+          Estado
+        </v-btn>
+
+        <v-btn
+            class="mt-2 ml-4 border-3 border__azul azul--text font-weight-medium text-capitalize rounded__normal"
+        >
+          GRE
+        </v-btn>
+
+        <v-btn class="mt-2 ml-4 azul white--text font-weight-medium text-capitalize btn__shadow rounded__normal">
+          Escola
+        </v-btn>
+      </v-col>
+
+      <v-col
+          cols="12" sm="8"
+          md="4"
+      >
+        <v-select
+            :items="escola" filled
+            label="Filtrar desempenho por escola" color="azul"
+            hide-details
+        />
+      </v-col>
+      <v-col
+          cols="12" sm="8"
+          md="4"
+      >
+        <v-select
+            :items="turma" filled
+            label="Filtrar desempenho por turma" color="azul"
+            hide-details
+        />
       </v-col>
     </v-row>
 
     <v-row>
-      <v-col cols="12">
+      <v-col
+          cols="12" class="mt-12"
+      >
         <header-secao>
-          Seu Desempenho e Rankings
+          Desempenho e Rankings
         </header-secao>
       </v-col>
-
-      <!-- selecionar ranking -->
-      <SelecionarRanking />
 
       <v-col
           cols="12" class="mt-8"
       >
         <subheader-secao>
-          Ranking Escolar
+          Desempenho Geral
         </subheader-secao>
       </v-col>
 
       <v-col
-          cols="6" sm="4"
-          md="2"
-          v-for="card in informacoesAdicionais" :key="card.ttl"
+          cols="12" sm="6"
+          md="4" lg="3"
+          v-for="desempenho in desempenhoGeral" :key="desempenho.ttl"
       >
-        <!-- pontuacao e posicao no ranking selecionado -->
-        <v-card
-            class="d-flex align-center overflow-hidden"
-        >
-          <!-- icones dos card pequenos -->
-          <div class="my-4 pa-3 d-flex justify-center align-center relative left--2 rounded-circle bg__verde__desempenho">
-            <v-icon
-                v-text="card.icon" color="black"
-            />
-          </div>
-
-          <v-card-text class="py-0 px-1 mt-1">
-            <p class="text-h5 leading__supertight font-weight-bold black--text">
-              {{ card.info }}
+        <v-card>
+          <v-card-text>
+            <p class="font-weight-bold grey--text text--darken-3">
+              {{ desempenho.ttl }}
             </p>
 
-            <p
-                :class="[ card.ttl === 'Pontuação' ? 'ml-3' : 'd-none' ]" class="leading__tight grey--text text--darken-3"
+            <h5 class="text-h4 font-weight-bold grey--text text--darken-3">
+              {{  desempenho.nota }}
+            </h5>
+
+            <div
+                class="w-1/3 absolute bottom-0 right-4 azul rounded__normal__top"
+                :style="{ height: `${desempenho.altura}%` }"
             >
-              {{ card.legenda }}
+              <p class="mt-4 text-center font-weight-medium white--text">
+                {{ desempenho.altura.toFixed() }}%
+              </p>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col
+          cols="12" class="mt-8"
+      >
+        <subheader-secao>
+          Médias Gerais das Escolas
+        </subheader-secao>
+      </v-col>
+
+      <v-col
+          cols="12"
+      >
+        <v-card>
+          <v-card-text class="py-0 d-flex h-240 align-end justify-space-between">
+            <div
+                class="w-1/6 relative rounded__normal__top"
+                :class="[ medias.selecionado ? 'azul' : 'grey']"
+                v-for="medias in mediasGerais" :key="medias.ttl"
+                :style="{ height: `${medias.altura * 2.4}%` }"
+            >
+
+              <p
+                  class="w-full absolute top--6 text-center"
+                  :class="[ medias.selecionado ? 'font-weight-medium' : '' ]"
+              >
+                {{ medias.ttl }}
+              </p>
+
+              <p
+                  class="text-center font-weight-medium white--text"
+                  :class="[ medias.selecionado ? 'mt-2 text-h5' : '' ]"
+              >
+                {{ medias.altura }}%
+              </p>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <!-- médias -->
+      <v-col
+          cols="12" class="mt-8"
+      >
+        <subheader-secao>
+          Ranking por Área
+        </subheader-secao>
+      </v-col>
+
+      <v-col
+          cols="12" sm="4"
+          md="3"
+          v-for="desempenho in desempenhoArea2" :key="desempenho.ttl"
+      >
+        <v-card>
+          <v-card-text>
+            <p class="font-weight-bold grey--text text--darken-3">
+              {{ desempenho.ttl }}
             </p>
 
-            <p
-                :class="[ card.ttl === 'Pontuação' ? 'ml-4 d-none' : 'ml-1' ]" class="leading__tight grey--text text--darken-3"
+            <h5 class="text-h6 font-weight-bold grey--text text--darken-3">
+              {{  desempenho.ranking }}º <span class="body-2">colocado</span>
+            </h5>
+
+            <div
+                class="w-40 h-1/2 absolute bottom-0 right-4 text-center azul rounded__normal__top"
             >
-              {{ card.legenda }}
-            </p>
+              <v-icon
+                  v-text="'mdi-seal-variant'" color="white"
+                  class="mt-2"
+              />
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -722,24 +825,100 @@
 </template>
 
 <script>
-import SelecionarRanking from '../components/SelecionarRanking.vue';
 import PremiosMensais from '../components/PremiosMensais.vue';
 
 export default {
   name: 'DesempenhoGeral',
-  components: { PremiosMensais, SelecionarRanking },
+  components: { PremiosMensais },
 
   data () {
     return {
       play: 'mdi-play',
 
+      escola: ['Todas', 'Escola de Tal Canto', 'Escola Xzinho', 'Escolinha do Bairro'],
+      turma: ['Todas', '3 ano - A', '3 ano - B', '3 ano - C', '3 ano - D'],
+
+      mediasGerais: [
+        {
+          ttl: 'nota < 400',
+          altura: 5,
+          selecionado: false,
+        },
+        {
+          ttl: '399 < nota < 600',
+          altura: 30,
+          selecionado: false,
+        },
+        {
+          ttl: '599 < nota < 700',
+          altura: 35,
+          selecionado: false,
+        },
+        {
+          ttl: '699 < nota < 800',
+          altura: 20,
+          selecionado: true,
+        },
+        {
+          ttl: '799 < nota',
+          altura: 10,
+          selecionado: false,
+        },
+
+      ],
+
+      desempenhoGeral: [
+        {
+          ttl: 'Média TRI',
+          nota: 750,
+          get altura () {
+            return this.nota / 10;
+          },
+        },
+        {
+          ttl: 'Redação 1',
+          nota: 920,
+          get altura () {
+            return this.nota / 10;
+          },
+        },
+        {
+          ttl: 'Acertos totais',
+          nota: 110,
+          get altura () {
+            return (this.nota / 180) * 100;
+          },
+        },
+      ],
+      desempenhoArea2: [
+        {
+          ttl: 'Linguagens',
+          ranking: 750,
+        },
+        {
+          ttl: 'Humanas',
+          ranking: 920,
+        },
+        {
+          ttl: 'Matemática',
+          ranking: 110,
+        },
+        {
+          ttl: 'Natureza',
+          ranking: 110,
+        },
+        {
+          ttl: 'Redação',
+          ranking: 110,
+        },
+      ],
       desempenhoArea: [
         {
           redacao: 880,
-          humanas: 950,
-          natureza: 800,
-          matematica: 800,
-          linguagens: 900,
+          humanas: '950 - 42 acertos',
+          natureza: '800 - 30 acertos',
+          matematica: '730 - 30 acertos',
+          linguagens: '506 - 30 acertos',
         },
       ],
       desempenhoDisciplina: [
@@ -757,6 +936,7 @@ export default {
           edFisica: 900,
         },
       ],
+
       headerArea: [
         {
           text: 'Ciências Humanas',

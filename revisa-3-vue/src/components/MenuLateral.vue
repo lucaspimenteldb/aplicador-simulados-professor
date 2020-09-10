@@ -151,7 +151,7 @@ export default {
         },
         {
           icon: 'mdi-poll-box-outline',
-          ttl: 'Meu Desempenho',
+          ttl: 'Desempenho Geral',
           rota: '/desempenho-geral',
           menu: false,
         },
@@ -159,12 +159,6 @@ export default {
           icon: 'mdi-trophy-variant-outline',
           ttl: 'Rankings',
           rota: '/ranking',
-          menu: false,
-        },
-        {
-          icon: 'mdi-face-agent',
-          ttl: 'Fale conosco',
-          rota: '/suporte',
           menu: false,
         },
       ],

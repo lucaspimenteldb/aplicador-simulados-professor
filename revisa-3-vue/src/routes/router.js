@@ -49,11 +49,6 @@ const routes = [
     name: 'DesempenhoGeral',
     component: () => import('../pages/DesempenhoGeral'),
   },
-  {
-    path: '/suporte',
-    name: 'Suporte',
-    component: () => import('../pages/suporte/SuporteInicio'),
-  },
 
   // {
   //   path: '/gerar-simulado',

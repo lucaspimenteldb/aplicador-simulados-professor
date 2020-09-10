@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f08820-0911-4cc0-8696-e87f16fd44ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/revisa-3-vue/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -31,6 +30,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lucasPimentel\Desktop\Grafset\aplicador-simulados\revisa-3-vue\src\components" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,7 +45,10 @@
       <option name="presentableId" value="Default" />
       <updated>1599149719486</updated>
       <workItem from="1599149720572" duration="2542000" />
-      <workItem from="1599563303902" duration="11375000" />
+      <workItem from="1599563303902" duration="11677000" />
+      <workItem from="1599581085732" duration="5223000" />
+      <workItem from="1599653111088" duration="53000" />
+      <workItem from="1599744117613" duration="3348000" />
     </task>
     <servers />
   </component>
@@ -69,9 +76,9 @@
       <screen x="0" y="0" width="3072" height="1688" />
     </state>
     <state width="1549" height="449" key="GridCell.Tab.0.right/0.0.3072.1688@0.0.3072.1688" timestamp="1599152278332" />
-    <state x="609" y="579" width="612" height="520" key="find.popup" timestamp="1599579288977">
+    <state x="609" y="579" width="612" height="520" key="find.popup" timestamp="1599744602358">
       <screen x="0" y="0" width="3072" height="1688" />
     </state>
-    <state x="609" y="579" width="612" height="520" key="find.popup/0.0.3072.1688@0.0.3072.1688" timestamp="1599579288977" />
+    <state x="609" y="579" width="612" height="520" key="find.popup/0.0.3072.1688@0.0.3072.1688" timestamp="1599744602358" />
   </component>
 </project>
