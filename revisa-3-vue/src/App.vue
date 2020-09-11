@@ -14,8 +14,8 @@
 
 <script>
 
-import MenuLateral from './components/MenuLateral.vue';
-import Toolbar from './components/Toolbar.vue';
+import MenuLateral from './components-professores/MenuLateral.vue';
+import Toolbar from './components-professores/Toolbar.vue';
 
 export default {
   name: 'App',

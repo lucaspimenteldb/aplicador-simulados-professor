@@ -275,7 +275,7 @@
 </template>
 
 <script>
-import SelecionarRanking from '../components/SelecionarRanking.vue';
+import SelecionarRanking from '../components-professores/SelecionarRanking.vue';
 
 export default {
   name: 'Ranking',

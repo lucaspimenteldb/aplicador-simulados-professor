@@ -825,7 +825,7 @@
 </template>
 
 <script>
-import PremiosMensais from '../components/PremiosMensais.vue';
+import PremiosMensais from '../components-professores/PremiosMensais.vue';
 
 export default {
   name: 'DesempenhoGeral',
